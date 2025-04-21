@@ -21,7 +21,6 @@ public class ApiGatewayApplication {
 			@Value("${attendance.service.url}") String attendanceServiceUrl,
 			@Value("${auth.service.url}") String authServiceUrl
 	){
-		// added
 		return builder
 				.routes()
 				.route(r -> r.path("/attendance-service/v3/api-docs").and().method(HttpMethod.GET).uri(attendanceServiceUrl))
